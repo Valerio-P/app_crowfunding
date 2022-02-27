@@ -13,7 +13,7 @@ use Laravel\Cashier\Billable;
 
 class User extends Authenticatable implements HasMedia
 {
-    use HasApiTokens, HasFactory, Notifiable, InteractsWithMedia, Billable;
+    use HasApiTokens, HasFactory, Notifiable, Billable, InteractsWithMedia;
 
     /**
      * The attributes that are mass assignable.
