@@ -13,7 +13,7 @@ COPY . /app
 
 RUN sh -c "wget http://getcomposer.org/composer.phar && chmod a+x composer.phar && mv composer.phar /usr/local/bin/composer"
 RUN cd /app && \
-    /usr/local/bin/composer install && cp .env.example .env && php artisan key:generate
+    /usr/local/bin/composer install && php artisan key:generate
 
 RUN chown -R www-data: /app
 
