@@ -1,0 +1,17 @@
+{
+    "hosting": {
+        "public": "dist",
+        "ignore": [
+            "firebase.json",
+            "**/.*",
+            "**/node_modules/**"
+        ],
+        "rewrites": [{
+            "source": "**",
+            "run": {
+                "serviceId": "app-crowfunding",
+                "region": "us-central1"
+            }
+        }]
+    }
+}
