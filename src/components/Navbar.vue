@@ -334,7 +334,7 @@
             </li>
             <li class="nav-item">
               <router-link class="nav-link" to="/opportunities"
-                >Opportunità</router-link
+                >Opportunity</router-link
               >
             </li>
             <li class="nav-item dropdown">

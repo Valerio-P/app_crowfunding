@@ -314,8 +314,21 @@
 import { tns } from "tiny-slider/src/tiny-slider";
 
 export default {
+
+  data() {
+
+    return {
+
+      slider: {
+
+      }
+
+    }
+
+  },
+
   mounted() {
-    var slider = tns({
+    this.slider = tns({
       container: ".tns-carousel-inner-agents",
       items: 1,
       mode: "gallery",
@@ -323,6 +336,12 @@ export default {
       nav: false,
     });
   },
+
+  unmounted() {
+
+    this.slider.destroy()
+
+  }
 };
 </script>
 

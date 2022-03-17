@@ -30,9 +30,7 @@
               </p>
             </div>
             <div class="card-footer pt-0 border-0">
-              <a
-                class="btn btn-outline-primary stretched-link"
-                href=""
+              <a class="btn btn-outline-primary stretched-link" href=""
                 >Find a home</a
               >
             </div>
@@ -95,9 +93,7 @@
               </p>
             </div>
             <div class="card-footer pt-0 border-0">
-              <a
-                class="btn btn-outline-primary stretched-link"
-                href=""
+              <a class="btn btn-outline-primary stretched-link" href=""
                 >Find a rental</a
               >
             </div>
@@ -112,17 +108,44 @@
 <script>
 import { tns } from "tiny-slider/src/tiny-slider";
 export default {
+
+  data(){ 
+
+    return {
+
+      slider: {
+
+      }
+
+    }
+
+  },
+
   mounted() {
-    var slider = tns({
+
+          this.slider = tns({
       container: ".tns-carousel-inner",
       items: 3,
       controls: false,
       responsive: { 0: { items: 1 }, 500: { items: 2 }, 768: { items: 3 } },
       autoplay: true,
       autoplayButtonOutput: false,
-      navPosition: "bottom"
+      navPosition: "bottom",
     });
+
+
+    
+
+    
+
   },
+
+  unmounted(){
+
+    this.slider.destroy()
+
+  }
+
 };
 </script>
 

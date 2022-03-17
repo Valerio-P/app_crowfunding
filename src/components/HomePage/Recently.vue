@@ -39,20 +39,7 @@
             >
           </div>
         </div>
-        <ul class="nav nav-tabs d-none d-md-flex ps-lg-2 mb-0">
-          <li class="nav-item">
-            <a class="nav-link fs-sm mb-2 mb-md-0" href="#">Apartments</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link fs-sm active mb-2 mb-md-0" href="#">Houses</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link fs-sm mb-2 mb-md-0" href="#">Rooms</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link fs-sm mb-2 mb-md-0" href="#">Commercial</a>
-          </li>
-        </ul>
+
       </div>
       <a
         class="btn btn-link fw-normal d-none d-lg-block p-0"
@@ -69,7 +56,7 @@
             overflow-hidden
             h-100
           "
-          style="background-image: url(@/assets/images/01.jpg)"
+          :style="{ backgroundImage: 'url(' + require('@/assets/images/01.jpg') + ')' }"
         >
           <span class="img-gradient-overlay"></span>
           <div class="card-body content-overlay pb-0">
@@ -130,7 +117,7 @@
             overflow-hidden
             mb-4
           "
-          style="background-image: url(@/assets/images/02.jpg)"
+          :style="{ backgroundImage: 'url(' + require('@/assets/images/02.jpg') + ')' }"
         >
           <span class="img-gradient-overlay"></span>
           <div class="card-body content-overlay pb-0">
@@ -180,7 +167,7 @@
         </div>
         <div
           class="card bg-size-cover bg-position-center border-0 overflow-hidden"
-          style="background-image: url(@/assets/images/03.jpg)"
+          :style="{ backgroundImage: 'url(' + require('@/assets/images/03.jpg') + ')' }"
         >
           <span class="img-gradient-overlay"></span>
           <div class="card-body content-overlay pb-0">

@@ -91,8 +91,21 @@
 import { tns } from "tiny-slider/src/tiny-slider";
 
 export default {
+
+  data(){
+
+    return {
+
+      slider: {
+
+      }
+
+    }
+
+  },
+
   mounted() {
-    var slider = tns({
+    this.slider = tns({
       container: ".tns-carousel-inner-partners",
       items: 6,
       controls: false,
@@ -107,6 +120,12 @@ export default {
       navPosition: "bottom",
     });
   },
+
+  unmounted() {
+
+    this.slider.destroy()
+
+  }
 };
 </script>
 
