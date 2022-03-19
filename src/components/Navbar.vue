@@ -46,13 +46,25 @@
                   <div class="px-3">Or</div>
                   <hr class="w-100" />
                 </div>
-                <form class="needs-validation" @submit.prevent="login()">
+                <form
+                  class="needs-validation"
+                  id="form-login"
+                  @submit.prevent="login()"
+                >
+                  <div
+                    id="login-alert"
+                    class="alert alert-danger d-none"
+                    role="alert"
+                  >
+                    <span>{{ message }}</span>
+                  </div>
                   <div class="mb-4">
                     <label class="form-label mb-2" for="signin-email"
                       >Email address</label
                     >
                     <input
                       v-model="credential.email"
+                      name="email"
                       class="form-control"
                       type="email"
                       id="signin-email"
@@ -76,6 +88,7 @@
                     <div class="password-toggle">
                       <input
                         v-model="credential.password"
+                        name="password"
                         class="form-control"
                         type="password"
                         id="signin-password"
@@ -97,8 +110,27 @@
                       </label>
                     </div>
                   </div>
-                  <button class="btn btn-primary btn-lg w-100" type="submit">
+                  <button
+                    v-if="loginActive"
+                    id="sign-in-button"
+                    class="btn btn-primary btn-lg w-100"
+                    type="submit"
+                  >
                     Sign in
+                  </button>
+                  <button
+                    v-else
+                    id="sign-in-button"
+                    class="
+                      btn btn-primary btn-lg
+                      w-100
+                      d-flex
+                      justify-content-center
+                    "
+                    type="button"
+                    :disabled="!loginActive"
+                  >
+                    <div class="loader-auth"></div>
                   </button>
                 </form>
               </div>
@@ -169,11 +201,23 @@
                   <div class="px-3">Or</div>
                   <hr class="w-100" />
                 </div>
-                <form class="needs-validation" @submit.prevent="register()">
+                <form
+                  id="form-register"
+                  class="needs-validation"
+                  @submit.prevent="register()"
+                >
+                  <div
+                    id="register-alert"
+                    class="alert alert-danger d-none"
+                    role="alert"
+                  >
+                    <span>{{ message }}</span>
+                  </div>
                   <div class="mb-4">
                     <label class="form-label" for="signup-name">Name</label>
                     <input
                       v-model="registrationData.name"
+                      name="name"
                       class="form-control"
                       type="text"
                       id="signup-name"
@@ -187,6 +231,7 @@
                     >
                     <input
                       v-model="registrationData.surname"
+                      name="surname"
                       class="form-control"
                       type="text"
                       id="signup-surname"
@@ -215,6 +260,7 @@
                     <div class="password-toggle">
                       <input
                         v-model="registrationData.password"
+                        name="password"
                         class="form-control"
                         type="password"
                         id="signup-password"
@@ -222,6 +268,7 @@
                         required
                       />
                       <label
+                        id="password-register-show"
                         class="password-toggle-btn"
                         aria-label="Show/hide password"
                       >
@@ -243,6 +290,7 @@
                     <div class="password-toggle">
                       <input
                         v-model="registrationData.password_confirmation"
+                        name="password_confirmation"
                         class="form-control"
                         type="password"
                         id="signup-password-confirm"
@@ -250,6 +298,7 @@
                         required
                       />
                       <label
+                        id="password_confirmation-register-show"
                         class="password-toggle-btn"
                         aria-label="Show/hide password"
                       >
@@ -258,7 +307,7 @@
                           type="checkbox"
                           name="signup-password-confirm"
                         /><i
-                          id="password-toggle-check-icon"
+                          id="signup-password-confirm-icon"
                           class="bi bi-eye-slash"
                         ></i>
                       </label>
@@ -267,6 +316,7 @@
                   <div class="form-check mb-4">
                     <input
                       class="form-check-input"
+                      name="agree-to-terms"
                       type="checkbox"
                       id="agree-to-terms"
                       required
@@ -277,8 +327,25 @@
                       <a href="#">Privacy policy</a></label
                     >
                   </div>
-                  <button class="btn btn-primary btn-lg w-100" type="submit">
+                  <button
+                    v-if="registerActive"
+                    class="btn btn-primary btn-lg w-100"
+                    type="submit"
+                  >
                     Sign up
+                  </button>
+                  <button
+                    v-else
+                    class="
+                      btn btn-primary btn-lg
+                      w-100
+                      d-flex
+                      justify-content-center
+                    "
+                    type="button"
+                    :disabled="!registerActive"
+                  >
+                    <div class="loader-auth"></div>
                   </button>
                 </form>
               </div>
@@ -453,10 +520,15 @@ export default {
         password: "",
         password_confirmation: "",
       },
+
+      message: "",
+      loginActive: true,
+      registerActive: true,
     };
   },
 
   mounted() {
+    // login and register password show/hide
     let showPasswordToggles = document.querySelectorAll(
       ".password-toggle-check"
     );
@@ -488,9 +560,23 @@ export default {
 
   methods: {
     login() {
+      this.loginActive = false;
+      let formLogin = document.querySelector("#form-login");
+      let alert = document.querySelector("#login-alert");
+      let showButton = document.querySelector(".password-toggle-btn");
+
       store
         .dispatch("login", this.credential)
         .then((response) => {
+          this.loginActive = true;
+
+          alert.classList.add("d-none");
+
+          formLogin["email"].classList.remove("is-invalid");
+          formLogin["password"].classList.remove("is-invalid");
+
+          showButton.classList.remove("me-3");
+
           this.credential.email = "";
 
           this.credential.password = "";
@@ -500,14 +586,46 @@ export default {
           dismissModal.click();
         })
         .catch((error) => {
-          console.log(error);
+          this.loginActive = true;
+
+          let errors = error.response.data.message;
+
+          this.message = errors;
+
+          alert.classList.remove("d-none");
+
+          if (errors) {
+            formLogin["email"].classList.add("is-invalid");
+            formLogin["password"].classList.add("is-invalid");
+
+            showButton.classList.add("me-3");
+          }
         });
     },
 
     register() {
+      this.registerActive = false;
+      let formRegister = document.querySelector("#form-register");
+      let alert = document.querySelector("#register-alert");
+      let showButtonPassword = document.querySelector(
+        "#password-register-show"
+      );
+      let showButtonPasswordConfirmation = document.querySelector(
+        "#password_confirmation-register-show"
+      );
       store
         .dispatch("register", this.registrationData)
         .then((response) => {
+          this.registerActive = true;
+          formRegister["name"].classList.remove("is-invalid");
+          formRegister["surname"].classList.remove("is-invalid");
+          formRegister["password"].classList.remove("is-invalid");
+          formRegister["password_confirmation"].classList.remove("is-invalid");
+
+          alert.classList.add("d-none");
+          showButtonPassword.classList.remove("me-3");
+          showButtonPasswordConfirmation.classList.remove("me-3");
+
           this.registrationData.name = "";
 
           this.registrationData.surname = "";
@@ -519,11 +637,31 @@ export default {
           this.registrationData.password_confirmation = "";
 
           let dismissModal = document.querySelector("#dismiss-modal-register");
-
           dismissModal.click();
         })
         .catch((error) => {
-          console.log(error);
+          this.registerActive = true;
+
+          if (error.response) {
+            let message = error.response.data.message;
+            let errors = error.response.data.errors;
+            this.message = message;
+            alert.classList.remove("d-none");
+
+            Object.keys(errors).forEach(function (key) {
+              if (key == "password") {
+                formRegister["password"].classList.add("is-invalid");
+                formRegister["password_confirmation"].classList.add(
+                  "is-invalid"
+                );
+
+                showButtonPassword.classList.add("me-3");
+                showButtonPasswordConfirmation.classList.add("me-3");
+              } else {
+                formRegister[key].classList.add("is-invalid");
+              }
+            });
+          }
         });
     },
 
@@ -539,4 +677,21 @@ export default {
 </script>
 
 <style>
+.loader-auth {
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #fd5631;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 </style>
