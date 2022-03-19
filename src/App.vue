@@ -12,8 +12,6 @@ import Footer from "./components/Footer.vue";
 
 import store from "./store";
 
-import useAxios from "./bootstrap"
-
 export default {
   name: "App",
 
@@ -25,16 +23,6 @@ export default {
   async mounted() {
 
     this.getUser();
-
-    useAxios.get("http://localhost:8000/sanctum/csrf-cookie").then( (error, response) => {
-
-      console.log(error)
-
-      console.log(response)
-
-      console.log(response.config.headers["X-XSRF-TOKEN"])
-
-    })
 
 
   },

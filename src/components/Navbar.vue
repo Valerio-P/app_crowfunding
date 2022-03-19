@@ -89,7 +89,11 @@
                         <input
                           class="password-toggle-check"
                           type="checkbox"
-                        /><span class="password-toggle-indicator"></span>
+                          name="signin-password"
+                        /><i
+                          id="signin-password-icon"
+                          class="bi bi-eye-slash"
+                        ></i>
                       </label>
                     </div>
                   </div>
@@ -224,7 +228,11 @@
                         <input
                           class="password-toggle-check"
                           type="checkbox"
-                        /><span class="password-toggle-indicator"></span>
+                          name="signup-password"
+                        /><i
+                          id="signup-password-icon"
+                          class="bi bi-eye-slash"
+                        ></i>
                       </label>
                     </div>
                   </div>
@@ -248,7 +256,11 @@
                         <input
                           class="password-toggle-check"
                           type="checkbox"
-                        /><span class="password-toggle-indicator"></span>
+                          name="signup-password-confirm"
+                        /><i
+                          id="password-toggle-check-icon"
+                          class="bi bi-eye-slash"
+                        ></i>
                       </label>
                     </div>
                   </div>
@@ -442,6 +454,32 @@ export default {
         password_confirmation: "",
       },
     };
+  },
+
+  mounted() {
+    let showPasswordToggles = document.querySelectorAll(
+      ".password-toggle-check"
+    );
+
+    showPasswordToggles.forEach((el) => {
+      el.addEventListener("click", () => {
+        let id = el.name;
+
+        let inputChecked = document.querySelector("#" + id);
+
+        let icon = document.querySelector("#" + id + "-icon");
+
+        if (el.checked) {
+          inputChecked.type = "text";
+          icon.classList.remove("bi-eye-slash");
+          icon.classList.add("bi-eye");
+        } else {
+          inputChecked.type = "password";
+          icon.classList.remove("bi-eye");
+          icon.classList.add("bi-eye-slash");
+        }
+      });
+    });
   },
 
   props: {
