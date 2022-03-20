@@ -5,7 +5,7 @@
  */
 import axios from "axios"
 
-let url = "http://localhost:8000"
+let url = "https://api.gruppofinder.it/"
 
 let useAxios = axios.create({
 

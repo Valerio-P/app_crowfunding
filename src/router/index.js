@@ -9,6 +9,7 @@ import Profile from "../views/Profile.vue"
 import Contacts from "../views/Contacts.vue"
 import Opportunities from "../views/Opportunities.vue"
 import Property from "../views/Property.vue"
+import HowItWorks from "../views/HowItWorks.vue"
 
 // components
 
@@ -89,7 +90,12 @@ const routes = [{
         path: '/opportunity/:id',
         name: 'Property',
         component: Property
-    }
+    },
+    {
+        path: '/howitworks',
+        name: 'HowItWorks',
+        component: HowItWorks
+    },
 ]
 
 const router = createRouter({

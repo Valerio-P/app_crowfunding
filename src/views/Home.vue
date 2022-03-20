@@ -5,7 +5,7 @@
     <recently />
     <categories-icons :animazione="animazione" />
     <calculator />
-    <partners />
+    <partners :left="true" />
     <agents />
   </div>
 </template>

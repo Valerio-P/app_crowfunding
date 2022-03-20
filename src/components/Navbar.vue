@@ -400,7 +400,7 @@
           to="/contacts"
         >
           <i class="fas fa-phone me-sm-2"></i
-          ><span class="d-none d-sm-inline">Contattaci</span>
+          ><span class="d-none d-sm-inline">Contacts Us</span>
         </router-link>
         <div
           class="collapse navbar-collapse order-lg-2 justify-content-center"
@@ -426,14 +426,9 @@
                 >About Us</a
               >
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="">Add Property</a></li>
-                <li><a class="dropdown-item" href="">Property Promotion</a></li>
-                <li>
-                  <a class="dropdown-item" href="">Vendor Page: Properties</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="">Vendor Page: Reviews</a>
-                </li>
+                <li><router-link class="dropdown-item" to="/howitworks">How it works</router-link></li>
+                <li><a class="dropdown-item" href="">FAQ</a></li>
+                <li><a class="dropdown-item" href="">Contacts</a></li>
               </ul>
             </li>
             <div v-if="userData.id">

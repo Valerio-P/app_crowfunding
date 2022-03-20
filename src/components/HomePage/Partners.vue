@@ -1,7 +1,7 @@
 <template>
   <!-- Partners (carousel)-->
   <section class="container mb-5 pb-2 pb-lg-4">
-    <h2 class="h3 mb-4 text-center text-md-start">Our partners</h2>
+    <h2 class="h3 mb-4 text-center" :class="{ 'text-md-start': left }">Our partners</h2>
     <div class="tns-carousel-wrapper tns-nav-outside tns-nav-outside-flush">
       <div class="tns-carousel-inner-partners">
         <div>
@@ -91,6 +91,12 @@
 import { tns } from "tiny-slider/src/tiny-slider";
 
 export default {
+
+  props: {
+
+    left: Boolean
+
+  },
 
   data(){
 
