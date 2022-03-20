@@ -33,15 +33,7 @@
           ><span class="d-table badge bg-info">New</span>
         </div>
         <div class="content-overlay end-0 top-0 pt-3 pe-3">
-          <button
-            class="btn btn-icon btn-light btn-xs text-primary rounded-circle"
-            type="button"
-            data-bs-toggle="tooltip"
-            data-bs-placement="left"
-            title="Add to Wishlist"
-          >
-            <i class="fi-heart"></i>
-          </button>
+
         </div>
         <div class="tns-carousel-inner-property" :id="'property' + item.id">
           <img src="@/assets/images/06.jpg" alt="Image" /><img

@@ -427,8 +427,8 @@
               >
               <ul class="dropdown-menu">
                 <li><router-link class="dropdown-item" to="/howitworks">How it works</router-link></li>
-                <li><a class="dropdown-item" href="">FAQ</a></li>
-                <li><a class="dropdown-item" href="">Contacts</a></li>
+                <li><router-link class="dropdown-item" to="/faq">FAQ</router-link></li>
+                <li><router-link class="dropdown-item" to="/contacts">Contacts</router-link></li>
               </ul>
             </li>
             <div v-if="userData.id">

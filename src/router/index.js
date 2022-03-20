@@ -10,6 +10,7 @@ import Contacts from "../views/Contacts.vue"
 import Opportunities from "../views/Opportunities.vue"
 import Property from "../views/Property.vue"
 import HowItWorks from "../views/HowItWorks.vue"
+import Faq from "../views/Faq.vue"
 
 // components
 
@@ -95,6 +96,11 @@ const routes = [{
         path: '/howitworks',
         name: 'HowItWorks',
         component: HowItWorks
+    },
+    {
+        path: '/faq',
+        name: 'Faq',
+        component: Faq
     },
 ]
 

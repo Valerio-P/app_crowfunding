@@ -79,30 +79,29 @@
                 class="text-decoration-none text-light pe-2"
                 href=""
               >
-                <div class="fs-sm text-uppercase pt-2 mb-1">For rental</div>
                 <h3 class="h5 text-light mb-1">Luxury Rental Villa</h3>
                 <div class="fs-sm opacity-70">
-                  <i class="fi-map-pin me-1"></i>118-11 Sutphin Blvd Jamaica, NY
+                  <i class="fa fa-map me-1"></i>118-11 Sutphin Blvd Jamaica, NY
                   11434
                 </div></a
               >
               <div class="btn-group ms-n2 ms-sm-0 mt-3">
-                <a
+                <router-link
                   class="btn btn-primary px-3"
-                  href=""
+                  to="/opportunities"
                   style="height: 2.75rem"
-                  >From $3,850</a
+                  >From $3,850</router-link
                 >
-                <button
+                <router-link
                   class="
                     btn btn-primary btn-icon
                     border-end-0 border-top-0 border-bottom-0 border-light
                     fs-sm
                   "
-                  type="button"
+                  to="/opportunities"
                 >
-                  <i class="fi-heart"></i>
-                </button>
+                  <i class="fas fa-eye"></i>
+                </router-link>
               </div>
             </div>
           </div>
@@ -137,30 +136,29 @@
                 class="text-decoration-none text-light pe-2"
                 href=""
               >
-                <div class="fs-sm text-uppercase pt-2 mb-1">For sale</div>
                 <h3 class="h5 text-light mb-1">Duplex with Garage</h3>
                 <div class="fs-sm opacity-70">
-                  <i class="fi-map-pin me-1"></i>21 Pulaski Road Kings Park, NY
+                  <i class="fa fa-map me-1"></i>21 Pulaski Road Kings Park, NY
                   11754
                 </div></a
               >
               <div class="btn-group ms-n2 ms-sm-0 mt-3">
-                <a
+                <router-link
                   class="btn btn-primary px-3"
-                  href=""
+                  to="/opportunities"
                   style="height: 2.75rem"
-                  >$200,410</a
+                  >$200,410</router-link
                 >
-                <button
+                <router-link
                   class="
                     btn btn-primary btn-icon
                     border-end-0 border-top-0 border-bottom-0 border-light
                     fs-sm
                   "
-                  type="button"
+                  to="/opportunities"
                 >
-                  <i class="fi-heart"></i>
-                </button>
+                  <i class="fas fa-eye"></i>
+                </router-link>
               </div>
             </div>
           </div>
@@ -187,29 +185,28 @@
                 class="text-decoration-none text-light pe-2"
                 href=""
               >
-                <div class="fs-sm text-uppercase pt-2 mb-1">For sale</div>
                 <h3 class="h5 text-light mb-1">Country House</h3>
                 <div class="fs-sm opacity-70">
-                  <i class="fi-map-pin me-1"></i>6954 Grand AveMaspeth, NY 11378
+                  <i class="fa fa-map me-1"></i>6954 Grand AveMaspeth, NY 11378
                 </div></a
               >
               <div class="btn-group ms-n2 ms-sm-0 mt-3">
-                <a
+                <router-link
                   class="btn btn-primary px-3"
-                  href=""
+                  to="/opportunities"
                   style="height: 2.75rem"
-                  >$162,000</a
+                  >$162,000</router-link
                 >
-                <button
+                <router-link
                   class="
                     btn btn-primary btn-icon
                     border-end-0 border-top-0 border-bottom-0 border-light
                     fs-sm
                   "
-                  type="button"
+                  to="/opportunities"
                 >
-                  <i class="fi-heart"></i>
-                </button>
+                  <i class="fas fa-eye"></i>
+                </router-link>
               </div>
             </div>
           </div>
