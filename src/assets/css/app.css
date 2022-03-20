@@ -17936,11 +17936,12 @@ h6 .dropdown-toggle::after,
     margin-left: -1.4375rem;
     transform: scale(0.3);
     color: #fff;
-    font-family: "finder-icons";
+    font-family: "Font Awesome 5 Free";
     font-size: 1.75rem;
     text-align: center;
     line-height: 2.875rem;
-    content: "";
+    content: "\f00e";
+    font-weight: 900;
     z-index: 5
 }
 

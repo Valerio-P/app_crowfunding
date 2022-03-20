@@ -19,70 +19,6 @@
       </nav>
       <h1 class="h2 mb-2">Pine Apartments</h1>
       <p class="mb-2 pb-1 fs-lg">28 Jackson Ave Long Island City, NY 67234</p>
-      <!-- Features + Sharing-->
-      <div class="d-flex justify-content-between align-items-center">
-        <ul class="d-flex mb-4 list-unstyled">
-          <li class="me-3 pe-3 border-end">
-            <b class="me-1">4</b
-            ><i class="fi-bed mt-n1 lead align-middle text-muted"></i>
-          </li>
-          <li class="me-3 pe-3 border-end">
-            <b class="me-1">2</b
-            ><i class="fi-bath mt-n1 lead align-middle text-muted"></i>
-          </li>
-          <li class="me-3 pe-3 border-end">
-            <b class="me-1">2</b
-            ><i class="fi-car mt-n1 lead align-middle text-muted"></i>
-          </li>
-          <li><b>56 </b>sq.m</li>
-        </ul>
-        <div class="text-nowrap">
-          <button
-            class="
-              btn btn-icon btn-light-primary btn-xs
-              shadow-sm
-              rounded-circle
-              ms-2
-              mb-2
-            "
-            type="button"
-            data-bs-toggle="tooltip"
-            title="Add to Wishlist"
-          >
-            <i class="fi-heart"></i>
-          </button>
-          <div
-            class="dropdown d-inline-block"
-            data-bs-toggle="tooltip"
-            title="Share"
-          >
-            <button
-              class="
-                btn btn-icon btn-light-primary btn-xs
-                shadow-sm
-                rounded-circle
-                ms-2
-                mb-2
-              "
-              type="button"
-              data-bs-toggle="dropdown"
-            >
-              <i class="fi-share"></i>
-            </button>
-            <div class="dropdown-menu dropdown-menu-end my-1">
-              <button class="dropdown-item" type="button">
-                <i class="fi-facebook fs-base opacity-75 me-2"></i>Facebook
-              </button>
-              <button class="dropdown-item" type="button">
-                <i class="fi-twitter fs-base opacity-75 me-2"></i>Twitter
-              </button>
-              <button class="dropdown-item" type="button">
-                <i class="fi-instagram fs-base opacity-75 me-2"></i>Instagram
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
     </section>
     <!-- Gallery-->
     <section class="container overflow-auto mb-4 pb-3">
@@ -94,7 +30,7 @@
         <div class="col-8">
           <a
             class="gallery-item rounded rounded-md-3"
-            href="@/assets/images/06.jpg"
+            href="/img/06.dac40671.jpg"
           >
             <img
               src="@/assets/images/06.jpg"
@@ -105,13 +41,13 @@
         <div class="col-4">
           <a
             class="gallery-item rounded rounded-md-3 mb-2 mb-md-3"
-            href="@/assets/images/06.jpg"
+            href="/img/06.dac40671.jpg"
             ><img
               src="@/assets/images/06.jpg"
               alt="Gallery thumbnail" /></a
           ><a
             class="gallery-item rounded rounded-md-3"
-            href="@/assets/images/06.jpg"
+            href="/img/06.dac40671.jpg"
             ><img
               src="@/assets/images/06.jpg"
               alt="Gallery thumbnail"
@@ -122,7 +58,7 @@
             <div class="col">
               <a
                 class="gallery-item rounded-1 rounded-md-2"
-                href="@/assets/images/06.jpg"
+                href="/img/06.dac40671.jpg"
                 ><img
                   src="@/assets/images/06.jpg"
                   alt="Gallery thumbnail"
@@ -131,7 +67,7 @@
             <div class="col">
               <a
                 class="gallery-item rounded-1 rounded-md-2"
-                href="@/assets/images/06.jpg"
+                href="/img/06.dac40671.jpg"
                 ><img
                   src="@/assets/images/06.jpg"
                   alt="Gallery thumbnail"
@@ -140,7 +76,7 @@
             <div class="col">
               <a
                 class="gallery-item rounded-1 rounded-md-2"
-                href="@/assets/images/06.jpg"
+                href="/img/06.dac40671.jpg"
                 ><img
                   src="@/assets/images/06.jpg"
                   alt="Gallery thumbnail"
@@ -149,7 +85,7 @@
             <div class="col">
               <a
                 class="gallery-item rounded-1 rounded-md-2"
-                href="@/assets/images/06.jpg"
+                href="/img/06.dac40671.jpg"
                 ><img
                   src="@/assets/images/06.jpg"
                   alt="Gallery thumbnail"
@@ -158,7 +94,7 @@
             <div class="col">
               <a
                 class="gallery-item more-item rounded-1 rounded-md-2"
-                href="@/assets/images/06.jpg"
+                href="/img/06.dac40671.jpg"
                 ><img
                   src="@/assets/images/06.jpg"
                   alt="Gallery thumbnail"
@@ -319,7 +255,6 @@
                 Published: <b>Dec 9, 2020</b>
               </li>
               <li class="me-3 pe-3 border-end">Ad number: <b>681013232</b></li>
-              <li class="me-3 pe-3">Views: <b>48</b></li>
             </ul>
           </div>
         </div>
@@ -332,63 +267,25 @@
                 <a
                   class="text-decoration-none"
                   href="real-estate-vendor-properties.html"
-                  ><img
-                    class="rounded-circle mb-2"
-                    src="@/assets/images/06.jpg"
-                    width="60"
-                    alt="Avatar"
-                  />
+                  >
                   <h5 class="mb-1">Floyd Miles</h5>
-                  <div class="mb-1">
-                    <span class="star-rating"
-                      ><i class="star-rating-icon fi-star-filled active"></i
-                      ><i class="star-rating-icon fi-star-filled active"></i
-                      ><i class="star-rating-icon fi-star-filled active"></i
-                      ><i class="star-rating-icon fi-star-filled active"></i
-                      ><i
-                        class="star-rating-icon fi-star-filled active"
-                      ></i></span
-                    ><span class="ms-1 fs-sm text-muted">(45 reviews)</span>
-                  </div>
+
                   <p class="text-body">Imperial Property Group Agent</p></a
                 >
-                <div class="ms-4 flex-shrink-0">
-                  <a
-                    class="
-                      btn btn-icon btn-light-primary btn-xs
-                      shadow-sm
-                      rounded-circle
-                      ms-2
-                      mb-2
-                    "
-                    href="#"
-                    ><i class="fi-facebook"></i></a
-                  ><a
-                    class="
-                      btn btn-icon btn-light-primary btn-xs
-                      shadow-sm
-                      rounded-circle
-                      ms-2
-                      mb-2
-                    "
-                    href="#"
-                    ><i class="fi-linkedin"></i
-                  ></a>
-                </div>
               </div>
               <ul class="list-unstyled border-bottom mb-4 pb-4">
                 <li>
                   <a class="nav-link fw-normal p-0" href="tel:3025550107"
-                    ><i class="fi-phone mt-n1 me-2 align-middle opacity-60"></i
+                    ><i class="fas fa-phone-alt mt-n1 me-2 align-middle opacity-60"></i
                     >(302) 555-0107</a
                   >
                 </li>
                 <li>
                   <a
                     class="nav-link fw-normal p-0"
-                    href="mailto:floyd_miles@email.com"
-                    ><i class="fi-mail mt-n1 me-2 align-middle opacity-60"></i
-                    >floyd_miles@email.com</a
+                    href="mailto:test@email.com"
+                    ><i class="fas fa-envelope mt-n1 me-2 align-middle opacity-60"></i
+                    >test@email.com</a
                   >
                 </li>
               </ul>
@@ -492,7 +389,7 @@
                   data-bs-toggle="lightbox"
                   id="google-map"
                 >
-                  <i class="fi-route me-2"></i>Get directions
+                  <i class="fas fa-map me-2"></i>Get directions
                 </button>
               </div>
             </div>
@@ -507,8 +404,6 @@
 </template>
 
 <script>
-
-import lightGallery from "lightgallery.js/dist/js/lightgallery.js";
 
 export default {
 

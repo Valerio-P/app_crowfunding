@@ -4,10 +4,15 @@ import './bootstrap'
 
 import 'bootstrap'
 
+// lightgallery
+
+import 'lightgallery.js';
+import "lg-zoom.js/dist/lg-zoom.js";
+import "lg-thumbnail.js/dist/lg-thumbnail.js";
+
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
-
 
 // vue
 

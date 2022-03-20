@@ -17,8 +17,8 @@
             real estate. We have been operating more than 10 years. Search
             millions of apartments and houses on Finder.
           </p>
-          <a class="btn btn-lg btn-primary" href="real-estate-contacts.html"
-            >Contact us</a
+          <router-link class="btn btn-lg btn-primary" to="/contacts"
+            >Contact us</router-link
           >
         </div>
         <!-- Hero carousel-->
@@ -514,10 +514,10 @@
               Amet libero morbi venenatis ut est. Iaculis leo ultricies nunc id
               ante adipiscing. Vel metus odio at faucibus ac.
             </p>
-            <a
+            <router-link
               class="btn btn-lg btn-primary"
-              href="real-estate-catalog-sale.html"
-              ><i class="fas fa-search me-2"></i>Find property</a
+              to="/opportunities"
+              ><i class="fas fa-search me-2"></i>Find property</router-link
             >
           </div>
           <div class="col-4 d-md-block d-none align-self-end px-0">
@@ -539,7 +539,7 @@
         <h2 class="h3 mb-sm-0">Our recent highlights</h2>
         <a
           class="btn btn-link fw-normal ms-sm-3 p-0"
-          href="real-estate-blog.html"
+          href="#"
           >Go to blog<i class="fi-arrow-long-right ms-2"></i
         ></a>
       </div>
@@ -548,7 +548,7 @@
         <div class="tns-carousel-inner-works5 d-block">
           <!-- Item-->
           <article>
-            <a class="d-block mb-3" href="real-estate-blog-single.html"
+            <a class="d-block mb-3" href="#"
               ><img
                 class="rounded-3"
                 src="@/assets/images/about-us/highlights/05.jpg"
@@ -557,7 +557,7 @@
               >Property Market Analysis</a
             >
             <h3 class="fs-base pt-1">
-              <a class="nav-link" href="real-estate-blog-single.html"
+              <a class="nav-link" href="#"
                 >When Is the Right Time to Downsize Your Home?</a
               >
             </h3>
@@ -565,7 +565,7 @@
           </article>
           <!-- Item-->
           <article>
-            <a class="d-block mb-3" href="real-estate-blog-single.html"
+            <a class="d-block mb-3" href="#"
               ><img
                 class="rounded-3"
                 src="@/assets/images/about-us/highlights/01.jpg"
