@@ -10,4 +10,9 @@ class Property extends Model
     use HasFactory;
 
     protected $guard = [];
+
+    public function users()
+    {
+        return $this->belongsToMany(User::class);
+    }
 }

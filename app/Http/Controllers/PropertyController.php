@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Property;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class PropertyController extends Controller
 {
@@ -26,5 +27,15 @@ class PropertyController extends Controller
         }
 
         return response()->json("The property don't exist");
+    }
+
+    public function userProperties()
+    {
+
+        $user = Auth::user();
+
+        $user_properties = $user->properties()->get();
+
+        return response()->json($user_properties);
     }
 }

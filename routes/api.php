@@ -34,6 +34,8 @@ Route::get('/properties', [PropertyController::class, "allProperties"]);
 
 Route::get('/property/{id}', [PropertyController::class, "show"]);
 
+Route::middleware('auth:sanctum')->get('/user/properties', [PropertyController::class, "userProperties"]);
+
 Route::get('/json/map-options-real-estate-rent', function () {
 
     $res = [
@@ -87,6 +89,8 @@ Route::get('/json/map-options-real-estate-rent', function () {
 
     return response()->json($res);
 });
+
+// Payments
 
 Route::middleware('auth:sanctum')->get('/user/stripe/payment-methods', [StripeController::class, "customerMethods"]);
 
